@@ -1,0 +1,58 @@
+1. Configuración de rutas
+Instalar la libreria react-router-dom. Configurarla en el proyecto. Crear las rutas correspondientes para las siguientes vistas:
+1. Home (/posts)
+2. Perfil (/profile)
+3. Detalle de post (/posts/:id)
+4. Ingreso (/login)
+5. Registro (/register)
+6. Nueva publicación (/post)
+7. Playground
+Identificar si es necesaria alguna otra ruta.
+Son solo los archivos bases, con un "Hello World Home" por ejemplo para Home, "Hello Profile" para profile, etc. El contenido de cada sección se verá en otras tareas.
+
+2. Componente icono
+Este componente permite renderizar un icono. Recibe por parametro el nombre del icono que debe renderizar. Su implementación seria algo así:
+<Icon name="facebook" />
+
+3. Componente Botón
+Este componente permite renderizar un botón, y por propiedad recibe:
+* El texto del botón 
+* El estilo del botón (en bootsrap existen success, danger, warning, etc)
+* El tamaño del botón 
+* La acción del botón
+Ejemplo:
+<Button text="Aceptar" style="success" />
+
+4. Componente Card
+Es el componente que va a renderizar las publicaciones. Contiene:
+* Icono del usuario
+* Nombre de usuario
+* Ubicación
+* Imagen posteada (si es mas de una, renderizar componente Carousel)
+* Descripción de la publicación
+* Botón de like
+* Link para ir ver comentarios
+
+5. Componente Carousel
+Este componente recibe por propiedad un array de objetos, cada uno representa una imagen y contiene nombre de imagen y ruta de la imagen
+
+6. Componente Comments
+Este componente recibe un array de objetos para renderizar los comentarios. Cada comentario cotneien:
+* Nombre de usuario 
+* Comentario del usuario
+* Fecha del comentario
+
+7. Componente Header
+Este componente solo renderiza el logo y el nombre de la aplicación. Se mantiene fijo cuando se escrollea hacia abajo o arriba. Cuando se le da click en el logo o el nombre, se posiciona la página en el top.
+
+8. Componente Footer
+Este componente renderiza el pié de la aplicación, donde habrá tres opciones (de izquierda a derecha):
+1. Ir al inicio (mismo comportamiento que el Header al ahcer click en el icono o logo)
+2. Nuevo post (direcciona a /post)
+3. ir a perfil (direcciona a /profile)
+
+9. Servicios
+Crear el archivo encargado de hacer la llamada a los servicios, que contenga POST y GET. Crearlos en un archivo llamado services.js dentro de la carpeta utils.
+
+10. Mock
+Agregar en el archivo db.json los datos mockeados para poder ir haciendo pruebas cuando hagan npm run server.
